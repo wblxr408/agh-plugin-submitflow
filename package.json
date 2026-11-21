@@ -1,0 +1,68 @@
+{
+  "name": "@wblxr408/submitflow",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Configuration bundle for an independently authorized runtime.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-submitflow"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "SubmitFlow Job Tracker",
+      "summary": "Configuration bundle for an independently authorized runtime.",
+      "description": "Search jobs, review saved listings and application timelines, and optionally update local tracking records.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "岗位与投递工作台",
+          "summary": "配置 Bundle，配合单独配置和授权的运行组件使用。",
+          "description": "检索岗位、收藏和投递阶段，读取时间线做周复盘，可选更新本地追踪记录。"
+        }
+      }
+    },
+    "bundles": {
+      "workflow": {
+        "profile": {
+          "mcp": [
+            "submitflow"
+          ],
+          "toolPolicy": {
+            "readOnly": false
+          }
+        },
+        "presets": {
+          "submitflow": {
+            "name": "submitflow",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "SubmitFlow Job Tracker",
+            "zh-CN": "岗位与投递工作台"
+          },
+          "description": {
+            "en": "Search jobs, review saved listings and application timelines, and optionally update local tracking records.",
+            "zh-CN": "检索岗位、收藏和投递阶段，读取时间线做周复盘，可选更新本地追踪记录。"
+          },
+          "preset": "submitflow",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Search jobs, review saved listings and application timelines, and optionally update local tracking records.",
+              "zh-CN": "检索岗位、收藏和投递阶段，读取时间线做周复盘，可选更新本地追踪记录。"
+            }
+          }
+        }
+      }
+    }
+  }
+}
